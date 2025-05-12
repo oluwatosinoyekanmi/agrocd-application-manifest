@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
       - name: agrocd-application
-        # image: ziemieu86/agrocd-applicationv1:latest
-        image: ziemieu86/agrocd-applicationv1:latest
+        # image: ziemieu86/agrocd-applicationv2:latest
+        image: ziemieu86/agrocd-applicationv2:latest
         ports:
         - containerPort: 3000   # Use port 3000
 
