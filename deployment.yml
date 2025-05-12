@@ -2,20 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris
+  name: agrocd-application
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tetris
+      app: agrocd-application
   template:
     metadata:
       labels:
-        app: tetris
+        app: agrocd-application
     spec:
       containers:
-      - name: tetris
-        image: sevenajay/tetrisv2:latest
+      - name: agrocd-application
+        # image: ziemieu86/agrocd-application:latest
+        image: image update
         ports:
         - containerPort: 3000   # Use port 3000
 
@@ -23,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tetris-service
+  name: agrocd-application-service
 spec:
   selector:
-    app: tetris
+    app: agrocd-application
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
